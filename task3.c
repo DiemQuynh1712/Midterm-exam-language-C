@@ -1,5 +1,5 @@
 #include <stdio.h>
-void choices ()//tạo function choices in ra các lựa chọn
+void choices ()//create a function "choices" that prints all the choices
 {
     printf("Please enter one of the following choices:\n");
     printf("C or c) carnivore\tP or p) pianist\n");
@@ -10,15 +10,15 @@ int main()//main function
 {
     char choice;//declare choice variable
     choices();//function call
-    printf("Please enter letters c, p, t, or g: ");//in ra câu dẫn chuẩn bị nhâp lựa chọn
-    scanf("%c", &choice);//nhập lựa chọn
-    while (choice != 'Q' && choice != 'q')//vòng lặp while cho phép người dùng nhập liên tục các lựa chọn
-                                        //nếu lựa chọn quit sẽ kết thúc vòng lặp
+    printf("Please enter letters c, p, t, or g: ");//Print out the sentence prepared to enter the selection
+    scanf("%c", &choice);//enter a choice
+    while (choice != 'Q' && choice != 'q')//The while loop allows the user to continuously enter choices
+                                        //If you choose "q" or "Q" (quit), the loop will terminate
     {
-        switch (choice)//switch case cho các trường hợp khác nhau
+        switch (choice)//switch case for different cases
         {
         case 'C': case 'c':
-            printf("Ok. A simple action is a carnivore\n");//in câu lệnh tương ứng với lựa chọn 
+            printf("Ok. A simple action is a carnivore\n");//print the statement corresponding to the choice
             break;
         case 'P': case 'p':
             printf("Ok. A simple action is a pianist\n");
@@ -30,10 +30,10 @@ int main()//main function
             printf("Ok. A simple action is a game\n");
             break;
         }
-        //sau khi in ra câu trả lời tương ứng với lựa chọn khác quit, chương trình tiếp tục vòng lặp while
-        //và hỏi người dùng lựa chọn tiếp theo
-        printf("Please enter letters c, p, t, or g: ");//in ra câu dẫn chuẩn bị nhâp lựa chọn
-        scanf("%c", &choice);//nhập lựa chọn
+        //After printing the answer corresponding to the option that is different from "quit", the program continues while loop
+        //and ask the user to choose the choice next
+        printf("Please enter letters c, p, t, or g: ");//Print out the sentence prepared to enter the selection
+        scanf("%c", &choice);//enter a choice
     }
     return 0;
 }

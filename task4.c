@@ -2,17 +2,17 @@
 int main ()//main function
 {
     int n, m;//declare n, m variable
-    printf("n: ");//yêu cầu người dùng nhập n là số đầu tiên
-    scanf("%d", &n);//nhập n
-    printf("m: ");//yêu cầu người dùng nhập m là số cuối cùng
-    scanf("%d", &m);//nhập m
-    int sum = 0;//declare sum variable (tính tổng)
-    for (int i = n; i <= m; i++) {//vòng lặp for, tạo biến đếm i, cho i chạy từ n đến m, i tăng dần 1 đơn vị
-        sum += i;//với mỗi i, tổng sum sẽ bằng sum cộng giá trị của i
-        //ví dụ: n = 2, m = 9, sum = 0, i = n = 2 ta được sum = 0 + 2 = 2
-        //tiếp tục: i = 3 -> sum = 2 + 3 = 5
-        //cứ thế cho đến khi biến i vượt quá 9, kết thúc vòng lặp, ta được tổng sum = 44
+    printf("n: ");//ask the user to enter n as the first number
+    scanf("%d", &n);//enter n
+    printf("m: ");//ask the user to enter m as the last number
+    scanf("%d", &m);//enter m
+    int sum = 0;//declare sum variable (calculate the sum)
+    for (int i = n; i <= m; i++) {//use for loop, create counter variable i, let i run from n to m, i increment by 1 unit
+        sum += i;//for each i, sum will be equal to sum plus the value of i
+        //for example: n = 2, m = 9, sum = 0, i = n = 2 -> sum = 0 + 2 = 2
+        //continue: i = 3 -> sum = 2 + 3 = 5
+        //and so on until the variable i exceeds 9, end of loop, we get sum = 44
     }
-    printf ("The sum of all the integers from %d through %d is %d\n", n, m, sum);//in ra câu kết luận
+    printf ("The sum of all the integers from %d through %d is %d\n", n, m, sum);//print the conclusion
     return 0;
 }
